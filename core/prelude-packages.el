@@ -34,7 +34,7 @@
 ;;; Code:
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 ;; set package-user-dir to be relative to Prelude install path
 (setq package-user-dir (expand-file-name "elpa" prelude-dir))
 (package-initialize)
@@ -43,8 +43,7 @@
 (setq url-http-attempt-keepalives nil)
 
 (defvar prelude-packages
-  '(ack-and-a-half exec-path-from-shell expand-region gist guru-mode helm helm-projectile magit magithub melpa
-                   rainbow-mode volatile-highlights yasnippet solarized-theme zenburn-theme)
+  '(auto-complete zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
